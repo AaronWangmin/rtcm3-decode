@@ -2,7 +2,6 @@
 #define MYSOCKET_H
 
 #include <string>
-#include <queue>
 #include <vector>
 using namespace std;
 
@@ -17,9 +16,7 @@ class mySocket : public QObject
 {
     Q_OBJECT
 public:
-    explicit mySocket(QObject *parent = 0);
-
-    queue<string> queAccept;
+    explicit mySocket(QObject *parent = 0);  
 
     void encodeRTCM3(myRTCM3& rtcm3,vector<unsigned char> &rtcm3In);
 
@@ -32,8 +29,6 @@ public slots:
 
 private:
     QTcpSocket *tcpSocket;
-
-    void byteArray2vector(vector<unsigned char>& destination,QByteArray& source);
 
 };
 
