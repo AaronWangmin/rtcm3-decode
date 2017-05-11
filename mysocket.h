@@ -17,9 +17,7 @@ class mySocket : public QObject
     Q_OBJECT
 public:
     explicit mySocket(QObject *parent = 0);  
-
-    void encodeRTCM3(myRTCM3& rtcm3,vector<unsigned char> &rtcm3In);
-
+    
 signals:
 
 public slots:
