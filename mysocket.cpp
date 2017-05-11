@@ -8,8 +8,6 @@
 
 #include "myhex.h"
 #include "myrtcm.h"
-#include "myrtcm3.h"
-#include "myrtcm1004.h"
 
 using namespace std;
 
@@ -61,24 +59,5 @@ void mySocket::acceptMessage()
         myRtcm rtcm;
         rtcm.rtcmFromRaw(recv);
 
-        cout << "------  rtcm3       test ------ \n" << endl;
-        vector<unsigned char> destination;
-        byteArray2vector(destination,recv);
-
-
     }
 }
-
-void mySocket::encodeRTCM3(myRTCM3 &rtcm3, vector<unsigned char> &rtcm3In)
-{
-    rtcm3.receiveMsg(rtcm3In);
-    rtcm3.decodeRTCM3();
-}
-
-void mySocket::byteArray2vector(vector<unsigned char> &destination, QByteArray &source)
-{
-    for(int i = 0; i < source.size(); i++){
-        destination.push_back(source.at(i));
-    }
-}
-
