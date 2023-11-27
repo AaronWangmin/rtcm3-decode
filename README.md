@@ -2,5 +2,3 @@
 decode rtcm3
 
 
-dddddddddddddddddd
-aaaaaaaaaaaaaaaaaaaaaaaa
